@@ -1,0 +1,257 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body y configuración global */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* Altura de toda la ventana */
+  margin: 0;
+  padding-top: 20px;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Contenedor principal */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario general */
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  resize: vertical; /* Permite redimensionar verticalmente */
+  height: 150px; /* Tamaño inicial */
+  font-family: Arial, sans-serif;
+}
+
+/* Botones */
+button, .btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width:100%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+}
+
+button:disabled, .btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  justify-self: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Listado de proyectos */
+.project-list {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Evita que los proyectos se salgan de su contenedor */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+/* Estilos para tarjetas de proyectos */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 100%; /* Asegura que las tarjetas no se desborden */
+}
+
+/* Contenedor de detalles del proyecto */
+.project-detail-container {
+  padding: 20px;
+}
+
+.project-description-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.project-description-container p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Contenedor de botones */
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Popup */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%; /* Más ancho */
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  overflow-y: auto; 
+}
+
+.popup-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.popup-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Botón de cierre en el popup */
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Estilos para el formulario de login y registro */
+.login-form, .register-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.forgot-password-link {
+  cursor: pointer;
+  color: #007bff;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .popup-content {
+    width: 80%;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  input[type="email"], input[type="password"], input[type="text"], textarea {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  button, .btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .project-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño de las tarjetas */
+  }
+}
